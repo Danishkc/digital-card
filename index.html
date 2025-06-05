@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amin Patel - Digital Card</title>
-  <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous">
+  <title>Amin Patel - Elegance Card</title>
   <style>
     :root {
-      --primary: #506680;
+      --primary: #0F4B40;
+      --secondary: #EAD5C5;
+      --text: #2C2C2C;
       --background: #ffffff;
-      --text: #333333;
-      --subtle: #999999;
+      --logo-bg: #ffffff;
     }
 
     [data-theme="dark"] {
-      --primary: #8ca4c4;
-      --background: #1e2c3b;
-      --text: #f0f0f0;
-      --subtle: #aaaaaa;
+      --primary: #144d45;
+      --secondary: #d9c0a6;
+      --text: #ffffff;
+      --background: #2C2C2C;
+      --logo-bg: #2C2C2C;
     }
 
     * {
@@ -55,10 +56,16 @@
     }
 
     .logo {
+      background-color: var(--logo-bg);
+      color: var(--primary);
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 6px;
       font-family: Georgia, serif;
       font-size: 1.3em;
       letter-spacing: 1px;
       text-transform: uppercase;
+      font-weight: bold;
     }
 
     .name {
@@ -99,7 +106,8 @@
       padding: 56px 20px 20px 20px;
       font-size: 1em;
       text-align: center;
-      background-color: var(--background);
+      background-color: var(--secondary);
+      color: var(--text);
     }
 
     .contact-section {
@@ -120,7 +128,7 @@
     }
 
     .contact-meta {
-      color: var(--subtle);
+      color: #888;
       font-size: 0.8em;
       margin-left: 6px;
     }
@@ -142,7 +150,7 @@
     }
 
     .add-contact-btn:hover, .toggle-theme-btn:hover {
-      background-color: #3d5066;
+      background-color: #0c3f36;
     }
 
     .qr-section {
@@ -172,7 +180,7 @@
 <body data-theme="light">
   <div class="card">
     <div class="top-section">
-      <div class="logo">elegance<br><span style="font-size: 0.7em; letter-spacing: 2px;">APPAREL</span></div>
+      <div class="logo">elegance</div>
       <div class="name">Amin Patel</div>
       <div class="pronoun">(he/him)</div>
       <div class="title">Founder/Owner</div>
@@ -208,16 +216,16 @@
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 
   <script>
-    // Generate QR code
+    // QR Code
     QRCode.toCanvas(document.getElementById('qrcode'), "https://www.eleganceapparel.com", {
       width: 120,
       color: {
-        dark: "#000000",
+        dark: "#0F4B40",
         light: "#ffffff"
       }
     });
 
-    // Download vCard
+    // Download .vcf
     function downloadVCF() {
       const vcf = `
 BEGIN:VCARD
